@@ -44,15 +44,16 @@ Stampare ogni data con i relativi post.  -->
         ],
     ];  
     
-    foreach ( $posts as $date => $items ) {
-        echo $date . '<br>';
+    // foreach ( $posts as $date => $items ) {
+    //     echo $date . '<br>';
 
-        foreach ( $items as $item ) {
-            foreach ( $item as $key => $element ) {
-                echo $key .':'. $element . '<br>';
-            }        
-        }
-    }
+    //     foreach ( $items as $key => $item ) {
+    //         echo $item['title'] . '<br>';
+    //         foreach ( $item as $key => $element ) {
+    //             echo $key .':'. $element . '<br>';
+    //         }        
+    //     }
+    // }
 ?>
 
 <!DOCTYPE html>
@@ -64,6 +65,24 @@ Stampare ogni data con i relativi post.  -->
     <title>Snack 3</title>
 </head>
 <body>
-    
+    <ul>
+        <?php foreach ( $posts as $date => $items ) { ?>
+        <li>
+            <h2>
+                <?php echo $date ?>
+            </h2>
+            
+            <ul>
+                <?php foreach ( $items as $item ) { ?>                              
+                <li>
+                    <h4><?php echo $item['title'] ?></h4>
+                    <p><?php echo $item['author'] ?></p>               
+                    <p><?php echo $item['text'] ?></p>               
+                </li>                    
+                <?php } ?>
+            </ul>                  
+        </li>
+        <?php } ?>
+    </ul>
 </body>
 </html>
