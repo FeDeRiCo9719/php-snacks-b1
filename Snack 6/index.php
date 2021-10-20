@@ -33,6 +33,13 @@ mettendo gli insegnanti in un rettangolo grigio e i PM in un rettangolo verde. -
             echo $key . ':' . $we . '<br>';
         }    
     }
+
+    foreach ( $db['pm'] as $key => $item ) {
+        echo $item. ':' . $key . '<br>';
+        foreach ( $item as $key => $we ) {
+            echo $key . ':' . $we . '<br>';
+        }    
+    }
 ?>
 
 <!DOCTYPE html>
