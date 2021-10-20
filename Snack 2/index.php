@@ -28,7 +28,7 @@ Se tutto è ok stampare “Accesso riuscito”, altrimenti “Accesso negato” 
     }
 
     // Se tutto è ok stampare “Accesso riuscito”, altrimenti “Accesso negato”
-    if ( strlen($name) > 3 && is_numeric($age) && filter_var($mail, FILTER_VALIDATE_EMAIL) ) {
+    if ( strlen($name) > 3 && is_numeric($age) && filter_var($mail, FILTER_VALIDATE_EMAIL) ) { // strpos( mail, '@')
         echo 'Accesso riuscito';
     } 
     else {
