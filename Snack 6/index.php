@@ -3,6 +3,7 @@ mettendo gli insegnanti in un rettangolo grigio e i PM in un rettangolo verde. -
 
 <?php
     $db = [
+
         'teachers' => [
             [
                 'name' => 'Michele',
@@ -13,6 +14,7 @@ mettendo gli insegnanti in un rettangolo grigio e i PM in un rettangolo verde. -
                 'lastname' => 'Forghieri'
             ]
         ],
+
         'pm' => [
             [
                 'name' => 'Roberto',
@@ -24,6 +26,13 @@ mettendo gli insegnanti in un rettangolo grigio e i PM in un rettangolo verde. -
             ]
         ]
     ];
+
+    foreach ( $db['teachers'] as $key => $item ) {
+        echo $item. ':' . $key . '<br>';
+        foreach ( $item as $key => $we ) {
+            echo $key . ':' . $we . '<br>';
+        }    
+    }
 ?>
 
 <!DOCTYPE html>
@@ -32,7 +41,7 @@ mettendo gli insegnanti in un rettangolo grigio e i PM in un rettangolo verde. -
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Snack 6</title>
 </head>
 <body>
     
