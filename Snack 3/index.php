@@ -24,7 +24,7 @@ Stampare ogni data con i relativi post.  -->
                 'text' => 'Testo post 3'
             ]
         ],
-        
+
         '15/05/2019' => [
             [
                 'title' => 'Post 4',
@@ -42,8 +42,17 @@ Stampare ogni data con i relativi post.  -->
                 'text' => 'Testo post 6'
             ]
         ],
-    ];
+    ];  
     
+    foreach ( $posts as $date => $items ) {
+        echo $date . '<br>';
+
+        foreach ( $items as $item ) {
+            foreach ( $item as $key => $element ) {
+                echo $key .':'. $element . '<br>';
+            }        
+        }
+    }
 ?>
 
 <!DOCTYPE html>
